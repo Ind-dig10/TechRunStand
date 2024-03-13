@@ -34,11 +34,6 @@ public class MapController : MonoBehaviour
         StartCoroutine(LoadTexture());
     }
 
-    public void LoadMap()
-    {
-
-    }
-
     IEnumerator LoadTexture()
     {
         yield return new WaitForSeconds(1F);
