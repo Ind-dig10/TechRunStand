@@ -26,7 +26,6 @@ public class MenuController : MonoBehaviour
        
     }
 
-    // Update is called once per frame
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

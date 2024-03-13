@@ -20,7 +20,7 @@ public class MapController : MonoBehaviour
         RectTransform rectTransform = image.rectTransform;
         int width = (int)rectTransform.rect.width; //1080
         int height = (int)rectTransform.rect.height; //1920
-
+        
         Map.EnabledLayer = true;
         Map.Width = 450;
         Map.Height = 450;
