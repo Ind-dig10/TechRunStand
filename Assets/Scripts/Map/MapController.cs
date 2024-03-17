@@ -6,7 +6,6 @@ using YandexMaps;
 
 public class MapController : MonoBehaviour
 {
-    public GameObject dd;
     public RawImage image;
     public Map.TypeMap typeMap;
     public Map.TypeMapLayer mapLayer;
@@ -20,7 +19,29 @@ public class MapController : MonoBehaviour
         RectTransform rectTransform = image.rectTransform;
         int width = (int)rectTransform.rect.width; //1080
         int height = (int)rectTransform.rect.height; //1920
-        
+        Map.EnabledLayer = true;
+        Map.Width = 250;
+        Map.Height = 450;
+        Map.Size = size;
+        Map.SetTypeMap = typeMap;
+        Map.SetTypeMapLayer = mapLayer;
+        Map.SetMarker = markers;
+        Map.Latitude = lat;
+        Map.Longitude = lon;
+        Map.LoadMap();
+        StartCoroutine(LoadTexture());
+
+    }
+
+    IEnumerator LoadTexture()
+    {
+        yield return new WaitForSeconds(1F);
+        image.texture = Map.GetTexture;
+    }
+
+    public void Plus()
+    {
+        size += 1;
         Map.EnabledLayer = true;
         Map.Width = 450;
         Map.Height = 450;
@@ -32,11 +53,23 @@ public class MapController : MonoBehaviour
         Map.Longitude = lon;
         Map.LoadMap();
         StartCoroutine(LoadTexture());
+        Debug.Log(12);
     }
 
-    IEnumerator LoadTexture()
+    public void Minus()
     {
-        yield return new WaitForSeconds(1F);
-        image.texture = Map.GetTexture;
+        size -= 1;
+        Map.EnabledLayer = true;
+        Map.Width = 450;
+        Map.Height = 450;
+        Map.Size = size;
+        Map.SetTypeMap = typeMap;
+        Map.SetTypeMapLayer = mapLayer;
+        Map.SetMarker = markers;
+        Map.Latitude = lat;
+        Map.Longitude = lon;
+        Map.LoadMap();
+        StartCoroutine(LoadTexture());
+        Debug.Log(33);
     }
 }

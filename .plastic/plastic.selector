@@ -1,0 +1,4 @@
+repository "TechRunStand@TechRunStand@cloud"
+  path "/"
+    br "/main"
+    co "/main"
