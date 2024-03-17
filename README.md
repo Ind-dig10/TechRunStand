@@ -17,3 +17,13 @@
 в переменной apiKey указать API Key от яндекс GPT
 Нужно будет скачать пакет OpenAI (если будут ошибки)
 https://github.com/srcnalt/OpenAI-Unity
+
+
+Importing the Package
+
+To import the package, follow these steps:
+
+    Open Unity 2019 or later
+    Go to Window > Package Manager
+    Click the + button and select Add package from git URL
+    Paste the repository URL https://github.com/srcnalt/OpenAI-Unity.git and click
